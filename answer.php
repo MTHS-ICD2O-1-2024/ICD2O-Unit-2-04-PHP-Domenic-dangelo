@@ -31,28 +31,21 @@
       <div class="right-image">
         <img src="./images/area_of_trinagle.png" alt="triangle" />
       </div>
-      <div class="page-content-php">Enter the base and height in cm.</div>
-      <form action="answer.php" method="GET">
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="base-of-triangle">
-          <label class="mdl-textfield__label" for="base-of-triangle">base of triangle (cm)</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
+      <div class="page-content-php">
+        <div id="user-info">
+          <?php
+          $baseOfTriangle = $_GET["base-of-triangle"];
+          $heightOfTriangle = $_GET["height-of-triangle"];
+          // process
+          $area = $baseOfTriangle * $heightOfTriangle / 2;
+          // output
+          echo "If a triangle has base = " . $baseOfTriangle . " cm and the width = " . $heightOfTriangle . " cm:";
+          echo "<br />";
+          echo "The area of the rectangle is " . $area . " cm².";
+          ?>
         </div>
-        <br />
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="height-of-triangle">
-          <label class="mdl-textfield__label" for="height-of-triangle">height of triangle (cm)</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="submit">
-          Calculate
-        </button>
-      </form>
-  </div>
-  </main>
+      </div>
+    </main>
   </div>
 </body>
 
