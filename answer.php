@@ -41,7 +41,7 @@
           // output
           echo "If a triangle has base = " . $baseOfTriangle . " cm and the width = " . $heightOfTriangle . " cm:";
           echo "<br />";
-          echo "The area of the rectangle is " . $area . " cm².";
+          echo "The area of the triangle is " . $area . " cm².";
           ?>
         </div>
       </div>
